@@ -7,11 +7,6 @@ class Sberbank
 	const API_USERNAME = 'sputnik_eda-api';
 	const API_PASSWORD = 'sputnik_eda';
 
-	// returnUrl param
-	private $return_url = 'http://sputnik-eda.ru/pay/'; 
-	// failUrl param
-	private $fail_url = 'http://sputnik-eda.ru/fail-pay/'; 
-
 	// default register options
 	private $register_options = [
 		'language' => 'ru',
