@@ -7,31 +7,18 @@ class Sberbank
 	const API_USERNAME = 'sputnik_eda-api';
 	const API_PASSWORD = 'sputnik_eda';
 
+	// register action request url
+	private $register_rest_url = 'https://3dsec.sberbank.ru/payment/rest/register.do';
+	// order status action request url
+	private $order_status_rest_url = 'https://3dsec.sberbank.ru/payment/rest/getOrderStatus.do';
+
 	// default register options
 	private $register_options = [
 		'language' => 'ru',
 		'currency' => '643',
-		'returnUrl' => 'https://3dsec.sberbank.ru/payment/rest/register.do',
-		'failUrl' => 'https://3dsec.sberbank.ru/payment/rest/getOrderStatus.do',
+		'returnUrl' => 'http://sputnik-eda.php/pay/',
+		'failUrl' => 'http://sputnik-eda.php/fail-pay/',
 	];
-
-	/**
-	* __construct set returnUrl and failtUrl params 
-	*
-	* @param string $return_url - returnUrl param
-	* @param string $fail_url - failUrl param
-	* @return void
-	*/
-	public function __construct($return_url = false, $fail_url = false) 
-	{
-		if ($return_url !== false) 
-			$this->return_url = $return_url;
-		}
-
-		if ($fail_url !== false) 
-			$this->fail_url = $fail_url;
-		}
-	}
 
 	/**
 	* setRegisterOption set value to register options array
