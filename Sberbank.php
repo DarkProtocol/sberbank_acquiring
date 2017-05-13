@@ -13,7 +13,7 @@ class Sberbank
 		'language' => 'ru',
 		'currency' => '643',
 		'returnUrl' => 'return_url',
-		'failUrl' => 'dail_url',
+		'failUrl' => 'fail_url',
 	];
 	/**
 	* setRegisterOption set value to register options array
