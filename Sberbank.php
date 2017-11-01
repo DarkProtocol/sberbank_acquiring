@@ -29,11 +29,11 @@ class Sberbank
 	/**
 	* getRegisterOption get register options array
 	*
-	* @return array
+	* @return mixed
 	*/
-	public function getRegisterOption($name, $value)
+	public function getRegisterOption($name)
 	{
-		return $this->register_options;
+		return $this->register_options[$name];
 	}
 	/**
 	* registerRequest make a register action request
